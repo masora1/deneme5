@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YBS</title>
+</head>
+<body>
+
+<h1>Sehirler</h1>
+<a href="/ekle" >Ekle</a>
+<table>
+    <tr>
+        <td>Mahalle</td>
+        <td>Ilce</td>
+        <td>Numara</td>
+        <td>Ev</td>
+        <td>Tarih</td>
+        <td>Sil</td>
+    </tr>
+    {% for sehir in  Sehirler %}
+    <tr>
+        <td>{{sehir.Mahalle}}</td>
+        <td>{{sehir.Ilce}}</td>
+        <td>{{sehir.Numara}}</td>
+        <td>{{sehir.Ev}}</td>
+        <td>{{sehir.Tarih}}</td>
+        <td><a href="sil/{{sehir.id}}">Sil</a></td>
+    </tr>
+{% endfor %}
+
+</table>
+
+
+
+
+</body>
+</html>
